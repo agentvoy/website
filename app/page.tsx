@@ -1,65 +1,70 @@
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar"
+import { HeroSection } from "@/components/HeroSection"
+import { FrameworksSection } from "@/components/FrameworksSection"
+import { GuardrailsSection } from "@/components/GuardrailsSection"
+import { FeaturesSection } from "@/components/FeaturesSection"
+import { QuickStartSection } from "@/components/QuickStartSection"
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-black text-white">
+      <Navbar />
+
+      <div className="max-w-6xl mx-auto">
+        <HeroSection />
+
+        <div className="border-t border-neutral-900" id="frameworks">
+          <FrameworksSection />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="border-t border-neutral-900" id="guardrails">
+          <GuardrailsSection />
         </div>
-      </main>
-    </div>
-  );
+
+        <div className="border-t border-neutral-900">
+          <FeaturesSection />
+        </div>
+
+        <div className="border-t border-neutral-900" id="quickstart">
+          <QuickStartSection />
+        </div>
+
+        {/* CTA */}
+        <div className="border-t border-neutral-900 text-center px-4 py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+            Start building your agent.
+          </h2>
+          <p className="text-neutral-400 mb-8">One command. Any framework. Secure by default.</p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <div className="flex items-center gap-3 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 font-mono text-sm">
+              <span className="text-neutral-500">$</span>
+              <span className="text-green-400">npx agentvoy create my-agent</span>
+            </div>
+            <a
+              href="https://github.com/agentvoy/agentvoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 border border-neutral-700 rounded-lg text-sm text-neutral-300 hover:text-white hover:border-neutral-500 transition-colors"
+            >
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer className="border-t border-neutral-900 px-6 py-5 flex items-center justify-between text-xs text-neutral-500 flex-wrap gap-3">
+        <span>
+          © 2026 AgentVoy · Apache 2.0 ·{" "}
+          <a href="https://github.com/ChinmayMurugkar" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition-colors">
+            Chinmay Murugkar
+          </a>
+        </span>
+        <div className="flex gap-4">
+          <a href="https://github.com/agentvoy/agentvoy" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition-colors">GitHub</a>
+          <a href="https://www.npmjs.com/package/agentvoy" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition-colors">npm</a>
+          <a href="https://github.com/agentvoy/agentvoy/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition-colors">License</a>
+        </div>
+      </footer>
+    </main>
+  )
 }
