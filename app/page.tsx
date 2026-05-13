@@ -4,6 +4,7 @@ import { FrameworksSection } from "@/components/FrameworksSection"
 import { GuardrailsSection } from "@/components/GuardrailsSection"
 import { FeaturesSection } from "@/components/FeaturesSection"
 import { QuickStartSection } from "@/components/QuickStartSection"
+import { DeploySection } from "@/components/DeploySection"
 
 export default function Home() {
   return (
@@ -25,6 +26,10 @@ export default function Home() {
           <FeaturesSection />
         </div>
 
+        <div className="border-t border-neutral-900" id="deploy">
+          <DeploySection />
+        </div>
+
         <div className="border-t border-neutral-900" id="quickstart">
           <QuickStartSection />
         </div>
@@ -34,11 +39,11 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
             Start building your agent.
           </h2>
-          <p className="text-neutral-400 mb-8">One command. Any framework. Secure by default.</p>
+          <p className="text-neutral-400 mb-8">One command. Any framework. Deploy anywhere.</p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <div className="flex items-center gap-3 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 font-mono text-sm">
               <span className="text-neutral-500">$</span>
-              <span className="text-green-400">npx agentvoy create my-agent</span>
+              <span className="text-green-400">npx agentvoy create my-project</span>
             </div>
             <a
               href="https://github.com/agentvoy/agentvoy"

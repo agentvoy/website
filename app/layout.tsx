@@ -20,11 +20,13 @@ export const metadata: Metadata = {
     template: "%s | AgentVoy",
   },
   description:
-    "AgentVoy is the open-source CLI to scaffold production-ready AI agents in seconds. Supports OpenAI Agents SDK, Google ADK, CrewAI, LangGraph, and Anthropic SDK. Built-in guardrails, cost limits, and prompt injection protection.",
+    "AgentVoy is the open-source CLI to scaffold, guard, and deploy production-ready AI agents and agentic apps. Supports OpenAI Agents SDK, Google ADK, CrewAI, LangGraph, and Anthropic SDK. Deploy to Docker, Fly.io, Railway, GCP, or AWS Lambda in one command.",
   keywords: [
     "AgentVoy",
     "AI agent",
     "agent scaffold",
+    "deploy AI agent",
+    "agentic app",
     "LangGraph",
     "CrewAI",
     "OpenAI Agents SDK",
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
     "agent framework",
     "agent guardrails",
     "agent CLI",
+    "multi-agent pipeline",
     "agentvoy",
   ],
   authors: [{ name: "Chinmay Murugkar", url: "https://github.com/ChinmayMurugkar" }],

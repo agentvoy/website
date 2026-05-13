@@ -9,6 +9,7 @@ export function Navbar() {
       <div className="flex items-center gap-6 text-sm text-neutral-400">
         <a href="#frameworks" className="hover:text-white transition-colors hidden sm:block">Frameworks</a>
         <a href="#guardrails" className="hover:text-white transition-colors hidden sm:block">Guardrails</a>
+        <a href="#deploy" className="hover:text-white transition-colors hidden sm:block">Deploy</a>
         <a href="#quickstart" className="hover:text-white transition-colors hidden sm:block">Quick Start</a>
         <a
           href="https://github.com/agentvoy/agentvoy"

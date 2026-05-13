@@ -1,9 +1,9 @@
-const steps = [
+const agentSteps = [
   {
     n: "1",
     title: "Create your agent project",
-    desc: "Run the command, pick your framework and model provider interactively — or pass flags to skip all prompts.",
-    code: "npx agentvoy create my-agent",
+    desc: "Run the command, pick your framework and model interactively — or pass flags to skip all prompts.",
+    code: "npx agentvoy create my-project --yes",
   },
   {
     n: "2",
@@ -20,8 +20,35 @@ const steps = [
   {
     n: "4",
     title: "Configure guardrails",
-    desc: "Edit agent.guard.yml to set permissions, cost limits, and behavior constraints for your specific use case.",
+    desc: "Edit agent.guard.yml to set permissions, cost limits, and behavior constraints.",
     code: "# Edit agent.guard.yml",
+  },
+]
+
+const appSteps = [
+  {
+    n: "1",
+    title: "Create a deployable app",
+    desc: "Choose App mode to get a FastAPI server, Streamlit chat UI, Dockerfile, and cloud configs — all generated.",
+    code: "npx agentvoy create my-project --build-mode app --deploy-target docker --yes",
+  },
+  {
+    n: "2",
+    title: "Add your API key and install",
+    desc: "Copy .env.example to .env. Install Python deps — includes FastAPI, Uvicorn, and Streamlit.",
+    code: "cp .env.example .env && pip install -r requirements.txt",
+  },
+  {
+    n: "3",
+    title: "Run locally",
+    desc: "Start the API server and chat UI. The /run endpoint calls your agent; /health reports status.",
+    code: "uvicorn server:app --reload --port 8080",
+  },
+  {
+    n: "4",
+    title: "Deploy to Docker or cloud",
+    desc: "Build and run with Docker. Or use the generated fly.toml / railway.json / cloud-run.yaml for cloud targets.",
+    code: "docker build -t my-project . && docker-compose up",
   },
 ]
 
@@ -33,24 +60,57 @@ export function QuickStartSection() {
         Up and running in 60 seconds.
       </h2>
       <p className="text-neutral-400 mb-10 max-w-xl">
-        No installation required. Just run the command and follow the prompts.
+        No installation required. Choose your path — local agent or deployable app.
       </p>
 
-      <div className="space-y-4">
-        {steps.map((step) => (
-          <div key={step.n} className="flex gap-5 items-start">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full border border-blue-500 bg-blue-500/10 text-blue-400 text-sm font-semibold flex items-center justify-center mt-1">
-              {step.n}
-            </div>
-            <div className="flex-1 bg-neutral-900 border border-neutral-800 rounded-xl p-5 hover:border-neutral-700 transition-colors">
-              <div className="font-semibold text-white mb-1">{step.title}</div>
-              <div className="text-sm text-neutral-400 mb-3">{step.desc}</div>
-              <code className="text-xs font-mono text-green-400 bg-black/40 px-3 py-1.5 rounded-lg block">
-                $ {step.code}
-              </code>
-            </div>
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Agent Path */}
+        <div>
+          <div className="flex items-center gap-2 mb-5">
+            <span className="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold">Path A</span>
+            <span className="text-white font-semibold">Local Agent</span>
           </div>
-        ))}
+          <div className="space-y-3">
+            {agentSteps.map((step) => (
+              <div key={step.n} className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full border border-blue-500 bg-blue-500/10 text-blue-400 text-xs font-semibold flex items-center justify-center mt-0.5">
+                  {step.n}
+                </div>
+                <div className="flex-1 bg-neutral-900 border border-neutral-800 rounded-xl p-4 hover:border-neutral-700 transition-colors">
+                  <div className="font-semibold text-white text-sm mb-1">{step.title}</div>
+                  <div className="text-xs text-neutral-400 mb-2.5">{step.desc}</div>
+                  <code className="text-xs font-mono text-green-400 bg-black/40 px-2.5 py-1.5 rounded-lg block break-all">
+                    $ {step.code}
+                  </code>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* App Path */}
+        <div>
+          <div className="flex items-center gap-2 mb-5">
+            <span className="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold">Path B</span>
+            <span className="text-white font-semibold">Deployable App</span>
+          </div>
+          <div className="space-y-3">
+            {appSteps.map((step) => (
+              <div key={step.n} className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full border border-purple-500 bg-purple-500/10 text-purple-400 text-xs font-semibold flex items-center justify-center mt-0.5">
+                  {step.n}
+                </div>
+                <div className="flex-1 bg-neutral-900 border border-neutral-800 rounded-xl p-4 hover:border-neutral-700 transition-colors">
+                  <div className="font-semibold text-white text-sm mb-1">{step.title}</div>
+                  <div className="text-xs text-neutral-400 mb-2.5">{step.desc}</div>
+                  <code className="text-xs font-mono text-green-400 bg-black/40 px-2.5 py-1.5 rounded-lg block break-all">
+                    $ {step.code}
+                  </code>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

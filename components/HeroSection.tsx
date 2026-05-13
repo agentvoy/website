@@ -25,23 +25,22 @@ export function HeroSection() {
           <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs font-medium mb-6 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              v0.2.0 — 5 frameworks available
+              v0.3.0 — scaffold, guard, and deploy
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight mb-4">
-              Build AI agents<br />
-              <span className="text-blue-400">without the boilerplate.</span>
+              Build and deploy<br />
+              <span className="text-blue-400">AI agents anywhere.</span>
             </h1>
 
             <p className="mt-2 text-neutral-400 max-w-md text-base leading-relaxed mb-8">
-              Scaffold production-ready AI agent projects in seconds.
-              Any framework. Any model. Secure by default.
+              Scaffold production-ready agents or full agentic apps — with API, chat UI, and one-command cloud deploy. Any framework. Any model.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex items-center gap-3 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 font-mono text-sm">
                 <span className="text-neutral-500">$</span>
-                <span className="text-green-400">npx agentvoy create my-agent</span>
+                <span className="text-green-400">npx agentvoy create my-project</span>
                 <button
                   onClick={copyCmd}
                   className="text-neutral-500 hover:text-neutral-300 transition-colors ml-1"
