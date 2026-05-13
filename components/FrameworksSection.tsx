@@ -4,7 +4,8 @@ const frameworks = [
   { name: "CrewAI",            lang: "Python", available: true },
   { name: "LangGraph",         lang: "Python", available: true },
   { name: "Anthropic SDK",     lang: "Python", available: true },
-  { name: "LlamaIndex",        lang: "Python", available: false },
+  { name: "LlamaIndex",        lang: "Python", available: true },
+  { name: "AutoGen",           lang: "Python", available: true },
 ]
 
 const providers = [

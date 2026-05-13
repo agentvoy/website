@@ -5,6 +5,7 @@ import { GuardrailsSection } from "@/components/GuardrailsSection"
 import { FeaturesSection } from "@/components/FeaturesSection"
 import { QuickStartSection } from "@/components/QuickStartSection"
 import { DeploySection } from "@/components/DeploySection"
+import { DeployTargetsStrip } from "@/components/DeployTargetsStrip"
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto">
         <HeroSection />
+
+        <DeployTargetsStrip />
 
         <div className="border-t border-neutral-900" id="frameworks">
           <FrameworksSection />
