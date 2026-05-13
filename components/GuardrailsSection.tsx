@@ -10,7 +10,16 @@ export function GuardrailsSection() {
           <p className="text-neutral-400 mb-6 leading-relaxed">
             Every AgentVoy project ships with <code className="text-green-400 bg-neutral-900 px-1.5 py-0.5 rounded text-sm font-mono">agent.guard.yml</code> —
             a universal declarative config for permissions, cost limits, and behavior constraints.
-            One format that works across every framework.
+            One format that works across every framework. Enforced at runtime by{" "}
+            <a
+              href="https://pypi.org/project/agentvoy-guard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+            >
+              agentvoy-guard
+            </a>
+            {" "}— automatically included in every project.
           </p>
           <div className="space-y-3">
             {[
@@ -41,8 +50,8 @@ export function GuardrailsSection() {
             <span className="text-xs font-mono text-neutral-500">agent.guard.yml</span>
           </div>
           <pre className="p-5 text-xs font-mono leading-relaxed overflow-x-auto">
-{`\u001b`}<code>{`\x1b[2m# Universal guardrails — works across all frameworks\x1b[0m`}</code>
-            <code className="text-neutral-300">{`version: `}</code><code className="text-yellow-300">{`"1.0"`}</code>{`
+<code className="text-neutral-500">{`# Universal guardrails — works across all frameworks`}</code>{`
+`}<code className="text-neutral-300">{`version: `}</code><code className="text-yellow-300">{`"1.0"`}</code>{`
 
 `}<code className="text-blue-400">{`model:`}</code>{`
   `}<code className="text-blue-400">{`provider:`}</code><code className="text-green-400">{` anthropic`}</code>{`
