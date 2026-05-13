@@ -1,33 +1,33 @@
 const features = [
   {
     icon: "⚡",
-    title: "One command setup",
-    desc: "Run npx agentvoy create and get a complete, runnable project — no boilerplate hunting, no framework-specific config spelunking.",
+    title: "Two paths, one command",
+    desc: "Build a local agent for experimentation, or a full deployable app with FastAPI server, Streamlit chat UI, and cloud configs — all from npx agentvoy create.",
+  },
+  {
+    icon: "🚀",
+    title: "Deploy anywhere",
+    desc: "Docker, Fly.io, Railway, GCP Cloud Run, AWS Lambda. AgentVoy generates all deployment files. Your guardrails flow into infrastructure config automatically.",
   },
   {
     icon: "🔒",
     title: "Secure by default",
-    desc: "Every project ships with guardrails config. Permissions, cost caps, iteration limits — defined before you write a line of agent logic.",
+    desc: "Every project ships with agent.guard.yml. Permissions, cost caps, iteration limits, prompt injection blocking — enforced before you write a line of agent logic.",
   },
   {
     icon: "🔌",
-    title: "Any model provider",
-    desc: "OpenAI, Anthropic, Google, Groq, Mistral, or Ollama locally. Swap providers without rewriting your agent.",
+    title: "Any framework. Any model.",
+    desc: "OpenAI Agents SDK, Google ADK, CrewAI, LangGraph, Anthropic, LlamaIndex, AutoGen. Swap providers without rewriting your agent.",
   },
   {
-    icon: "📐",
-    title: "Universal guardrails standard",
-    desc: "agent.guard.yml is a framework-agnostic format. Define security constraints once, enforce them across any framework.",
-  },
-  {
-    icon: "🖥️",
-    title: "No GPU required",
-    desc: "Runs on any laptop. Just bring your API key. Or use Ollama for fully local, free inference with no cloud costs.",
+    icon: "🤖",
+    title: "Multi-agent pipelines",
+    desc: "Build sequential pipelines where each agent builds on the previous stage's output. Name your agents, configure the count, and get a production-ready pipeline.py.",
   },
   {
     icon: "🔓",
     title: "Apache 2.0 open source",
-    desc: "Fully open source, forever. No vendor lock-in. No usage limits. Fork it, extend it, add your own framework adapter.",
+    desc: "Fully open source, forever. No vendor lock-in. No usage limits. Fork it, extend it, add your own framework or deployment adapter.",
   },
 ]
 
