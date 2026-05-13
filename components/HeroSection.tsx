@@ -23,19 +23,28 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row h-full min-h-[560px]">
           {/* Left */}
           <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs font-medium mb-6 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs font-medium mb-5 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
               v0.4.0 — scaffold, guard, and deploy
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight mb-4">
               Build and deploy<br />
-              <span className="text-blue-400">AI agents anywhere.</span>
+              <span className="text-blue-400">agentic apps.</span>
             </h1>
 
-            <p className="mt-2 text-neutral-400 max-w-md text-base leading-relaxed mb-8">
-              Scaffold production-ready agents or full agentic apps — with API, chat UI, and one-command cloud deploy. Any framework. Any model.
+            <p className="mt-2 text-neutral-400 max-w-md text-base leading-relaxed mb-5">
+              Single agents or multi-agent pipelines — with FastAPI, Streamlit chat UI, and one-command deploy to Docker, Fly.io, Railway, GCP, or AWS. Any framework. Any model.
             </p>
+
+            {/* Feature pills */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {["Single agent", "Multi-agent pipeline", "FastAPI + Streamlit", "Docker · Fly.io · Railway · GCP · AWS", "7 frameworks"].map((pill) => (
+                <span key={pill} className="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-neutral-400 text-xs">
+                  {pill}
+                </span>
+              ))}
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex items-center gap-3 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 font-mono text-sm">
@@ -53,12 +62,12 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex items-center gap-4 mt-5">
               <a
                 href="https://github.com/agentvoy/agentvoy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors flex items-center gap-1"
+                className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors"
               >
                 GitHub →
               </a>
