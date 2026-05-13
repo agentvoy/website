@@ -25,7 +25,7 @@ export function HeroSection() {
           <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs font-medium mb-6 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              v0.3.0 — scaffold, guard, and deploy
+              v0.4.0 — scaffold, guard, and deploy
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight mb-4">
