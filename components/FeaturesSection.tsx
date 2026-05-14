@@ -2,12 +2,17 @@ const features = [
   {
     icon: "⚡",
     title: "Two paths, one command",
-    desc: "Build a local agent for experimentation, or a full deployable app with FastAPI server, Streamlit chat UI, and cloud configs — all from npx agentvoy create.",
+    desc: "Build a local agent for experimentation, or a full deployable app with FastAPI server, Streamlit chat UI, DevTools dashboard, and cloud configs — all from npx agentvoy create.",
+  },
+  {
+    icon: "🔬",
+    title: "Live DevTools",
+    desc: "Real-time agent tracing via WebSocket. See every LLM call, tool invocation, guard check, and pipeline stage as it happens — with a dark-themed dashboard at /dev.",
   },
   {
     icon: "🚀",
-    title: "Deploy anywhere",
-    desc: "Docker, Fly.io, Railway, GCP Cloud Run, AWS Lambda. AgentVoy generates all deployment files. Your guardrails flow into infrastructure config automatically.",
+    title: "One-command deploy",
+    desc: "agentvoy deploy --target docker builds and runs your container. agentvoy deploy --target fly-io deploys to the cloud. Secrets, configs, and health checks handled automatically.",
   },
   {
     icon: "🔒",
@@ -17,17 +22,12 @@ const features = [
   {
     icon: "🔌",
     title: "Any framework. Any model.",
-    desc: "OpenAI Agents SDK, Google ADK, CrewAI, LangGraph, Anthropic, LlamaIndex, AutoGen. Swap providers without rewriting your agent.",
+    desc: "OpenAI, Google ADK, CrewAI, LangGraph, Anthropic, LlamaIndex, AutoGen. Switch models on the fly from the chat UI — no restart needed.",
   },
   {
     icon: "🤖",
     title: "Multi-agent pipelines",
-    desc: "Build sequential pipelines where each agent builds on the previous stage's output. Name your agents, configure the count, and get a production-ready pipeline.py.",
-  },
-  {
-    icon: "🔓",
-    title: "Apache 2.0 open source",
-    desc: "Fully open source, forever. No vendor lock-in. No usage limits. Fork it, extend it, add your own framework or deployment adapter.",
+    desc: "Build sequential pipelines where each agent builds on the previous stage. Name your agents, and get a production-ready pipeline with real-time stage visualization.",
   },
 ]
 

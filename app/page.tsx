@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection"
 import { FrameworksSection } from "@/components/FrameworksSection"
 import { GuardrailsSection } from "@/components/GuardrailsSection"
 import { FeaturesSection } from "@/components/FeaturesSection"
+import { DevToolsSection } from "@/components/DevToolsSection"
 import { QuickStartSection } from "@/components/QuickStartSection"
 import { DeploySection } from "@/components/DeploySection"
 import { DeployTargetsStrip } from "@/components/DeployTargetsStrip"
@@ -19,6 +20,10 @@ export default function Home() {
 
         <div className="border-t border-neutral-900" id="frameworks">
           <FrameworksSection />
+        </div>
+
+        <div className="border-t border-neutral-900" id="devtools">
+          <DevToolsSection />
         </div>
 
         <div className="border-t border-neutral-900" id="guardrails">

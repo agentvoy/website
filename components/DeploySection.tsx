@@ -3,35 +3,40 @@ const targets = [
     name: "Docker",
     icon: "🐳",
     files: ["Dockerfile", ".dockerignore", "docker-compose.yml"],
-    cmd: "docker-compose up",
+    cmd: "agentvoy deploy --target docker",
+    desc: "Builds the image, runs the container, exposes API + DevTools",
     color: "blue",
   },
   {
     name: "Fly.io",
     icon: "✈️",
     files: ["deploy/fly.toml"],
-    cmd: "fly deploy",
+    cmd: "agentvoy deploy --target fly-io",
+    desc: "Checks auth, sets secrets from .env, deploys via flyctl",
     color: "violet",
   },
   {
     name: "Railway",
     icon: "🚂",
     files: ["deploy/railway.json"],
-    cmd: "railway up",
+    cmd: "agentvoy deploy --target railway",
+    desc: "Generates railway.json config for one-click deploy",
     color: "purple",
   },
   {
     name: "GCP Cloud Run",
     icon: "☁️",
     files: ["deploy/cloud-run.yaml"],
-    cmd: "gcloud run deploy",
+    cmd: "agentvoy deploy --target gcp-cloud-run",
+    desc: "Generates Cloud Run service config with health checks",
     color: "blue",
   },
   {
     name: "AWS Lambda",
     icon: "λ",
     files: ["deploy/template.yaml", "deploy/lambda_handler.py"],
-    cmd: "sam deploy",
+    cmd: "agentvoy deploy --target aws-lambda",
+    desc: "SAM template + Lambda handler for serverless deploy",
     color: "orange",
   },
 ]
@@ -41,10 +46,10 @@ export function DeploySection() {
     <section className="w-full px-4 py-16">
       <div className="text-xs font-semibold tracking-widest text-purple-400 uppercase mb-3">Deploy</div>
       <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
-        One config. Deploy anywhere.
+        One command. Deploy anywhere.
       </h2>
       <p className="text-neutral-400 mb-4 max-w-xl">
-        AgentVoy generates all deployment files for your chosen target. Your <code className="text-neutral-300 font-mono text-sm">agent.guard.yml</code> guardrails flow directly into infrastructure config — timeouts, memory limits, and security constraints.
+        <code className="text-neutral-300 font-mono text-sm">agentvoy deploy</code> builds, configures, and ships your agent. Your <code className="text-neutral-300 font-mono text-sm">agent.guard.yml</code> guardrails flow directly into infrastructure config.
       </p>
 
       {/* Guard → infra mapping callout */}
@@ -76,10 +81,11 @@ export function DeploySection() {
             key={t.name}
             className="bg-neutral-900 border border-neutral-800 rounded-xl p-5 hover:border-neutral-700 transition-colors"
           >
-            <div className="flex items-center gap-2.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-2">
               <span className="text-xl">{t.icon}</span>
               <span className="font-semibold text-white">{t.name}</span>
             </div>
+            <p className="text-xs text-neutral-500 mb-3">{t.desc}</p>
             <div className="space-y-1 mb-4">
               {t.files.map((f) => (
                 <div key={f} className="flex items-center gap-2 text-xs text-neutral-400 font-mono">
@@ -98,11 +104,11 @@ export function DeploySection() {
           <div>
             <div className="font-semibold text-white mb-2">Existing project?</div>
             <p className="text-xs text-neutral-400 mb-4">
-              Add deployment to any existing agent project without touching your agent code.
+              Add deployment to any existing agent project — generates server.py, DevTools, and all deployment files without touching your agent code.
             </p>
           </div>
           <code className="text-xs font-mono text-green-400 bg-black/40 px-2.5 py-1.5 rounded-lg block">
-            $ npx agentvoy deploy
+            $ agentvoy deploy --target docker
           </code>
         </div>
       </div>

@@ -29,26 +29,26 @@ const appSteps = [
   {
     n: "1",
     title: "Create a deployable app",
-    desc: "Choose App mode to get a FastAPI server, Streamlit chat UI, Dockerfile, and cloud configs — all generated.",
-    code: "npx agentvoy create my-project --build-mode app --deploy-target docker --yes",
+    desc: "Choose App mode to get a FastAPI server, Streamlit chat UI, DevTools dashboard, Dockerfile, and cloud configs.",
+    code: "npx agentvoy create my-project --build-mode app --yes",
   },
   {
     n: "2",
     title: "Add your API key and install",
-    desc: "Copy .env.example to .env. Install Python deps — includes FastAPI, Uvicorn, and Streamlit.",
+    desc: "Copy .env.example to .env. Install Python deps — includes FastAPI, Uvicorn, Streamlit, and websockets.",
     code: "cp .env.example .env && pip install -r requirements.txt",
   },
   {
     n: "3",
-    title: "Run locally",
-    desc: "Start the API server and chat UI. The /run endpoint calls your agent; /health reports status.",
-    code: "uvicorn server:app --reload --port 8080",
+    title: "Start with DevTools",
+    desc: "Launch the dev server with live tracing. DevTools dashboard opens at /dev — see every LLM call, tool use, and guard check in real time.",
+    code: "agentvoy dev",
   },
   {
     n: "4",
-    title: "Deploy to Docker or cloud",
-    desc: "Build and run with Docker. Or use the generated fly.toml / railway.json / cloud-run.yaml for cloud targets.",
-    code: "docker build -t my-project . && docker-compose up",
+    title: "Deploy",
+    desc: "One command to build and run with Docker, or deploy to Fly.io. Secrets and health checks handled automatically.",
+    code: "agentvoy deploy --target docker",
   },
 ]
 

@@ -20,18 +20,22 @@ export const metadata: Metadata = {
     template: "%s | AgentVoy",
   },
   description:
-    "AgentVoy is the open-source CLI to scaffold, guard, and deploy production-ready AI agents and agentic apps. Supports OpenAI Agents SDK, Google ADK, CrewAI, LangGraph, and Anthropic SDK. Deploy to Docker, Fly.io, Railway, GCP, or AWS Lambda in one command.",
+    "AgentVoy is the open-source CLI to scaffold, develop, and deploy production-ready AI agents. Real-time DevTools, one-command deploy, 7 frameworks (OpenAI, CrewAI, LangGraph, Google ADK, Anthropic, LlamaIndex, AutoGen). Deploy to Docker or Fly.io in one command.",
   keywords: [
     "AgentVoy",
     "AI agent",
     "agent scaffold",
     "deploy AI agent",
     "agentic app",
+    "agent DevTools",
+    "agent tracing",
     "LangGraph",
     "CrewAI",
     "OpenAI Agents SDK",
     "Google ADK",
     "Anthropic",
+    "LlamaIndex",
+    "AutoGen",
     "agent framework",
     "agent guardrails",
     "agent CLI",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "AgentVoy — Universal AI Agent Development Platform",
     description:
-      "Scaffold production-ready AI agents in seconds. Any framework. Any model. Secure by default. Open source.",
+      "Scaffold and deploy production-ready AI agents in seconds. Real-time DevTools, one-command deploy, 7 frameworks. Open source.",
     url: "https://agentvoy.com",
     siteName: "AgentVoy",
     images: [
@@ -66,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AgentVoy — Universal AI Agent Development Platform",
     description:
-      "Scaffold production-ready AI agents in seconds. Any framework. Any model. Secure by default.",
+      "Scaffold and deploy production-ready AI agents in seconds. Real-time DevTools, one-command deploy, 7 frameworks.",
     images: ["/og.png"],
     creator: "@agentvoy",
   },

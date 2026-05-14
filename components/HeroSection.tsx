@@ -25,7 +25,7 @@ export function HeroSection() {
           <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs font-medium mb-5 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              v0.4.0 — scaffold, guard, and deploy
+              v0.5.0 — DevTools, one-command deploy, 7 frameworks
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight mb-4">
@@ -34,12 +34,12 @@ export function HeroSection() {
             </h1>
 
             <p className="mt-2 text-neutral-400 max-w-md text-base leading-relaxed mb-5">
-              Single agents or multi-agent pipelines — with FastAPI, Streamlit chat UI, and one-command deploy to Docker, Fly.io, Railway, GCP, or AWS. Any framework. Any model.
+              Single agents or multi-agent pipelines — with real-time DevTools, Streamlit chat UI, and one-command deploy to Docker or Fly.io. Any framework. Any model.
             </p>
 
             {/* Feature pills */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {["Single agent", "Multi-agent pipeline", "FastAPI + Streamlit", "Docker · Fly.io · Railway · GCP · AWS", "7 frameworks"].map((pill) => (
+              {["Live DevTools", "One-command deploy", "7 frameworks", "Multi-agent pipelines", "FastAPI + Streamlit", "Docker · Fly.io · AWS · GCP"].map((pill) => (
                 <span key={pill} className="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-neutral-400 text-xs">
                   {pill}
                 </span>
