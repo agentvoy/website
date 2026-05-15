@@ -46,7 +46,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <div className="flex items-center gap-3 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 font-mono text-sm">
                 <span className="text-neutral-500">$</span>
                 <span className="text-green-400">npx agentvoy create my-project</span>
@@ -60,15 +60,15 @@ export function HeroSection() {
                   }
                 </button>
               </div>
+              <a
+                href="/create"
+                className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
+              >
+                Create project →
+              </a>
             </div>
 
             <div className="flex items-center gap-4 mt-5">
-              <a
-                href="/create"
-                className="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium"
-              >
-                Or create visually →
-              </a>
               <a
                 href="https://github.com/agentvoy/agentvoy"
                 target="_blank"
