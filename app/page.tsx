@@ -54,6 +54,12 @@ export default function Home() {
               <span className="text-green-400">npx agentvoy create my-project</span>
             </div>
             <a
+              href="/create"
+              className="px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors"
+            >
+              Create visually →
+            </a>
+            <a
               href="https://github.com/agentvoy/agentvoy"
               target="_blank"
               rel="noopener noreferrer"

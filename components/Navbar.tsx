@@ -20,12 +20,10 @@ export function Navbar() {
           GitHub
         </a>
         <a
-          href="https://www.npmjs.com/package/agentvoy"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/create"
           className="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-colors font-medium text-xs"
         >
-          npm install
+          Create project
         </a>
       </div>
     </nav>

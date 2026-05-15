@@ -64,6 +64,12 @@ export function HeroSection() {
 
             <div className="flex items-center gap-4 mt-5">
               <a
+                href="/create"
+                className="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium"
+              >
+                Or create visually →
+              </a>
+              <a
                 href="https://github.com/agentvoy/agentvoy"
                 target="_blank"
                 rel="noopener noreferrer"
