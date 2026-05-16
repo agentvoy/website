@@ -71,15 +71,12 @@ export function QuickStartSection() {
               <div className="w-3 h-3 rounded-full bg-red-500/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="text-xs text-neutral-500 font-mono ml-2">Creating a project with Anthropic SDK</span>
+              <span className="text-xs text-neutral-500 font-mono ml-2">npx agentvoy create</span>
             </div>
           </div>
-          <video
-            src="/demos/demo-create-project.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="/demos/demo-create.gif"
+            alt="AgentVoy CLI demo — scaffold a project in seconds"
             className="w-full"
           />
         </div>
