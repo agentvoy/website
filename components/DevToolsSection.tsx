@@ -25,15 +25,11 @@ export function DevToolsSection() {
               <div className="w-3 h-3 rounded-full bg-red-500/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="text-xs text-neutral-500 font-mono ml-2">Chat + DevTools — split view</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs text-green-400">Live demo</span>
+              <span className="text-xs text-neutral-500 font-mono ml-2">Creating a project with Anthropic SDK</span>
             </div>
           </div>
           <video
-            src="/demos/demo-devtools.mp4"
+            src="/demos/demo-create-project.mp4"
             autoPlay
             loop
             muted
