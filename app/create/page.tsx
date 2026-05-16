@@ -28,6 +28,25 @@ const providers = [
   { id: "mistral", name: "Mistral", models: ["mistral-large-latest"] },
 ]
 
+const frameworkProviders: Record<string, string[]> = {
+  openai: ["openai"],
+  anthropic: ["anthropic"],
+  "google-adk": ["google"],
+  crewai: ["openai", "anthropic", "google", "ollama", "groq"],
+  langgraph: ["openai", "anthropic", "google"],
+  llamaindex: ["openai", "anthropic", "google"],
+  autogen: ["openai", "anthropic"],
+}
+
+const providerKeyNames: Record<string, string> = {
+  openai: "OPENAI_API_KEY",
+  anthropic: "ANTHROPIC_API_KEY",
+  google: "GOOGLE_API_KEY",
+  ollama: "No key needed",
+  groq: "GROQ_API_KEY",
+  mistral: "MISTRAL_API_KEY",
+}
+
 const deployTargets = [
   { id: "docker", name: "Docker", desc: "Build and run locally" },
   { id: "fly-io", name: "Fly.io", desc: "Deploy to cloud in one command" },
@@ -336,6 +355,25 @@ export default function CreatePage() {
             ))}
           </div>
         </div>
+
+        {/* Compatibility notice */}
+        {frameworkProviders[framework] && !frameworkProviders[framework].includes(provider) && (
+          <div className="mt-6 bg-yellow-500/5 border border-yellow-500/30 rounded-xl p-4">
+            <p className="text-yellow-400 text-sm font-medium mb-1">Compatibility notice</p>
+            <p className="text-yellow-400/70 text-xs">
+              The <span className="font-mono font-semibold">{frameworks.find(f => f.id === framework)?.name}</span> framework may not support{" "}
+              <span className="font-mono font-semibold">{providers.find(p => p.id === provider)?.name}</span> natively.
+              Supported providers: {frameworkProviders[framework].map(pid => providers.find(p => p.id === pid)?.name || pid).join(", ")}.
+            </p>
+          </div>
+        )}
+
+        {providerKeyNames[provider] && (
+          <div className="mt-4 text-xs text-neutral-500">
+            Requires <span className="font-mono text-neutral-300">{providerKeyNames[provider]}</span> in your <span className="font-mono text-neutral-300">.env</span> file.
+            You can switch models at runtime by changing <span className="font-mono text-neutral-300">DEFAULT_MODEL</span> in <span className="font-mono text-neutral-300">.env</span>.
+          </div>
+        )}
       </div>
     )
   }
@@ -422,6 +460,23 @@ export default function CreatePage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* API key & model info */}
+        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-6">
+          <div className="text-xs text-neutral-500 uppercase tracking-widest mb-3">Required API key</div>
+          <div className="flex items-center gap-2 text-sm">
+            <span className="font-mono text-yellow-400">{providerKeyNames[provider] || `${provider.toUpperCase()}_API_KEY`}</span>
+            <span className="text-neutral-600">in your .env file</span>
+          </div>
+          {frameworkProviders[framework] && !frameworkProviders[framework].includes(provider) && (
+            <p className="text-yellow-400/70 text-xs mt-2">
+              Note: {frameworks.find(f => f.id === framework)?.name} may also require its native provider key. See framework docs.
+            </p>
+          )}
+          <p className="text-neutral-500 text-xs mt-2">
+            To switch models later, edit <span className="font-mono text-neutral-300">DEFAULT_MODEL</span> in your <span className="font-mono text-neutral-300">.env</span> file — no code changes needed.
+          </p>
         </div>
 
         {/* Next steps */}
