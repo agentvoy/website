@@ -11,6 +11,7 @@ export function Navbar() {
         <a href="#devtools" className="hover:text-white transition-colors hidden sm:block">DevTools</a>
         <a href="#deploy" className="hover:text-white transition-colors hidden sm:block">Deploy</a>
         <a href="#quickstart" className="hover:text-white transition-colors hidden sm:block">Quick Start</a>
+        <a href="/docs" className="hover:text-white transition-colors hidden sm:block">Docs</a>
         <a
           href="https://github.com/agentvoy/agentvoy"
           target="_blank"
