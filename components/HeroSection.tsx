@@ -97,6 +97,23 @@ export function HeroSection() {
           </div>
         </div>
       </Card>
+
+      {/* Demo GIF */}
+      <div className="mt-8 max-w-4xl mx-auto">
+        <div className="bg-[#06080f] border border-neutral-800 rounded-xl overflow-hidden">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-neutral-800">
+            <div className="w-3 h-3 rounded-full bg-red-500/80" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+            <div className="w-3 h-3 rounded-full bg-green-500/80" />
+            <span className="text-xs text-neutral-500 font-mono ml-2">npx agentvoy create</span>
+          </div>
+          <img
+            src="/demos/demo-create.gif"
+            alt="AgentVoy CLI demo — scaffold a project in seconds"
+            className="w-full"
+          />
+        </div>
+      </div>
     </section>
   )
 }

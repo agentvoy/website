@@ -63,6 +63,28 @@ export function QuickStartSection() {
         No installation required. Choose your path — local agent or deployable app.
       </p>
 
+      {/* Create project demo video */}
+      <div className="mb-10">
+        <div className="bg-[#06080f] border border-neutral-800 rounded-xl overflow-hidden">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-800">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80" />
+              <span className="text-xs text-neutral-500 font-mono ml-2">Creating a project with Anthropic SDK</span>
+            </div>
+          </div>
+          <video
+            src="/demos/demo-create-project.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full"
+          />
+        </div>
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8">
         {/* Agent Path */}
         <div>
