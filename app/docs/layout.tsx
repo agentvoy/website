@@ -13,6 +13,15 @@ const sections = [
     ],
   },
   {
+    title: "Features",
+    links: [
+      { href: "/docs/guides/guardrails", label: "Guardrails" },
+      { href: "/docs/guides/devtools", label: "DevTools Dashboard" },
+      { href: "/docs/guides/multi-agent", label: "Multi-Agent Pipelines" },
+      { href: "/docs/guides/chat-ui", label: "Streamlit Chat UI" },
+    ],
+  },
+  {
     title: "Frameworks",
     links: [
       { href: "/docs/frameworks/openai", label: "OpenAI Agents SDK" },
@@ -33,15 +42,6 @@ const sections = [
       { href: "/docs/api-keys/groq", label: "Groq" },
       { href: "/docs/api-keys/mistral", label: "Mistral" },
       { href: "/docs/api-keys/ollama", label: "Ollama (Local)" },
-    ],
-  },
-  {
-    title: "Features",
-    links: [
-      { href: "/docs/guides/guardrails", label: "Guardrails" },
-      { href: "/docs/guides/devtools", label: "DevTools Dashboard" },
-      { href: "/docs/guides/multi-agent", label: "Multi-Agent Pipelines" },
-      { href: "/docs/guides/chat-ui", label: "Streamlit Chat UI" },
     ],
   },
   {

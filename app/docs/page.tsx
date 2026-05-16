@@ -2,6 +2,17 @@ import Link from "next/link"
 
 const categories = [
   {
+    title: "Features",
+    desc: "Learn how to use AgentVoy's built-in features.",
+    color: "purple",
+    links: [
+      { href: "/docs/guides/guardrails", label: "Guardrails" },
+      { href: "/docs/guides/devtools", label: "DevTools Dashboard" },
+      { href: "/docs/guides/multi-agent", label: "Multi-Agent Pipelines" },
+      { href: "/docs/guides/chat-ui", label: "Streamlit Chat UI" },
+    ],
+  },
+  {
     title: "Frameworks",
     desc: "Get started with any of the 7 supported agent frameworks.",
     color: "blue",
@@ -26,17 +37,6 @@ const categories = [
       { href: "/docs/api-keys/groq", label: "Groq" },
       { href: "/docs/api-keys/mistral", label: "Mistral" },
       { href: "/docs/api-keys/ollama", label: "Ollama (Local)" },
-    ],
-  },
-  {
-    title: "Features",
-    desc: "Learn how to use AgentVoy's built-in features.",
-    color: "purple",
-    links: [
-      { href: "/docs/guides/guardrails", label: "Guardrails" },
-      { href: "/docs/guides/devtools", label: "DevTools Dashboard" },
-      { href: "/docs/guides/multi-agent", label: "Multi-Agent Pipelines" },
-      { href: "/docs/guides/chat-ui", label: "Streamlit Chat UI" },
     ],
   },
   {
