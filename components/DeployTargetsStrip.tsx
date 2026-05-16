@@ -51,7 +51,7 @@ const targets = [
 export function DeployTargetsStrip() {
   return (
     <div className="border-t border-neutral-900 px-4 py-8">
-      <p className="text-center text-xs font-semibold tracking-widest text-neutral-600 uppercase mb-6">
+      <p className="text-center text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-6">
         Deploy your agentic app to
       </p>
       <div className="flex items-center justify-center flex-wrap gap-6 md:gap-10">
@@ -61,12 +61,12 @@ export function DeployTargetsStrip() {
             className="flex flex-col items-center gap-2 group"
           >
             <div
-              className="opacity-40 group-hover:opacity-100 transition-opacity duration-200"
+              className="opacity-80 group-hover:opacity-100 transition-opacity duration-200"
               style={{ color: t.color }}
             >
               {t.icon}
             </div>
-            <span className="text-xs text-neutral-600 group-hover:text-neutral-400 transition-colors duration-200">
+            <span className="text-xs text-neutral-400 group-hover:text-neutral-200 transition-colors duration-200">
               {t.name}
             </span>
           </div>
